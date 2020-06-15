@@ -6,7 +6,7 @@
 - Git
 - Cmder
 
-# [VS CODE CONFIG]
+# VS Code Configuração e Extensões
 
 THEME
  - One Dark Pro
