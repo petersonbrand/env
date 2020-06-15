@@ -6,7 +6,7 @@
 - Git
 - Cmder
 
-# VS Code Configuração e Extensões
+# VS Code Configurações e Extensões
 
 THEME
  - One Dark Pro
@@ -37,22 +37,29 @@ IMPROVEMENTS FOR LARAVEL PROJECTS:
  - Laravel-blade
  - composer require --dev barryvdh/laravel-ide-helper --ignore-platform-reqs
  - set in your app/Providers/AppServiceProvider.php:
-   	public function register()
+
+	```php
+	public function register()
 	{
-	    if ($this->app->environment() !== 'production') {
-		$this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
-	    }
-	    // ...
+		if ($this->app->environment() !== 'production') {
+			$this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+		}
+		// ...
 	}
+	```
+
  - run php artisan clear-compiled
  - set in your composer.json (scripts):
-    "scripts": {
+    
+	```json
+	"scripts": {
 	    "post-update-cmd": [
 		"Illuminate\\Foundation\\ComposerScripts::postUpdate",
 		"@php artisan ide-helper:generate",
 		"@php artisan ide-helper:meta"
 	    ]
 	},
+	```
    
    - run composer and laravel commands:
     - composer update --ignore-platform-reqs
@@ -63,11 +70,13 @@ CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
  - instale a extensão no vs code chamada "php cs fixer" do junstyle
  
  - adicione no settings.json do seu vs code o seguinte conteúdo:
+   ```json
    "editor.formatOnSave": true,
    "php-cs-fixer.onsave": true,
    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
    "php-cs-fixer.config": "~/.vscode/.php_cs;",
    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+   ```
  
  - crie um arquivo .php_cs no diretório .vscode => touch .vscode\.php_cs
  - dentro do .php_cs, insira o conteúdo desse repositório: https://github.com/icarojobs/phpcsfixer-file
