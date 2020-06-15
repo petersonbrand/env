@@ -1,9 +1,12 @@
-# vscode-extensions
-[AMBIENTE]
+# Ambiente de Desenvolvimento
 
+- VS Code
+- PHP (Xdebug)
+- Composer
+- Git
+- Cmder
 
-
-[VS CODE]
+# [VS CODE CONFIG]
 
 THEME
  - One Dark Pro
@@ -58,12 +61,14 @@ IMPROVEMENTS FOR LARAVEL PROJECTS:
 CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
  - composer global require friendsofphp/php-cs-fixer
  - instale a extensão no vs code chamada "php cs fixer" do junstyle
+ 
  - adicione no settings.json do seu vs code o seguinte conteúdo:
    "editor.formatOnSave": true,
    "php-cs-fixer.onsave": true,
    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
    "php-cs-fixer.config": "~/.vscode/.php_cs;",
    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?"
+ 
  - crie um arquivo .php_cs no diretório .vscode => touch .vscode\.php_cs
  - dentro do .php_cs, insira o conteúdo desse repositório: https://github.com/icarojobs/phpcsfixer-file
  - salve o arquivo, crie um novo arquivo php sem padrões e na hora de salvar, surpreenda-se!
