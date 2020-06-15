@@ -3,6 +3,7 @@
 - VS Code
 - PHP (Xdebug)
 - Composer
+- Nodejs
 - Git
 - Cmder
 
@@ -10,31 +11,49 @@
 
 THEME
  - One Dark Pro
+ - Material Icons Theme
  
 EXTENSIONS
  - PHP Debug - Felix Becker
  - PHP Intelephense - Ben Mewburn
  - PHP Namespace Resolver
+ - PHP Getters & Setters - phproberto
 
  - Auto Close Tag
  - EditorConfig for VS Code
  - Laravel Blade Snippets
- - Laravel Goto View
  - Laravel Blade (Sintax Highlighting)
+ - Laravel Goto View
+ - Laravel Snippets
 
- - Test Explorer UI - Holger Benl
- - PHPUnit Test Explorer - Recca0102
- - Composer - Ioannis Kappas
+ - Inline Parameters for VSCode
+ 
  - Git History - Don Jayamanne
  - Git Project Manager - Felipe Caputo
+
  - HTML CSS Support - ecmel
  - HTML Snippets - Mohamed Abusaid
- - Material Icons Theme - Philip Kief
- - PHP Getters & Setters - phproberto
+
  - XML Tools - Josh Johnson
+
+
+SETTINGS.JSON
+
+```json
+{
+    "terminal.external.windowsExec": "C:\\cmder\\Cmder.exe",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/k C:\\Cmder\\vendor\\init.bat"
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.formatOnSave": true,
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "One Dark Pro",
+}
+```
  
 IMPROVEMENTS FOR LARAVEL PROJECTS:
- - Laravel-blade
  - composer require --dev barryvdh/laravel-ide-helper --ignore-platform-reqs
  - set in your app/Providers/AppServiceProvider.php:
 
@@ -61,9 +80,9 @@ IMPROVEMENTS FOR LARAVEL PROJECTS:
 	},
 	```
    
-   - run composer and laravel commands:
-    - composer update --ignore-platform-reqs
-    - php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
+ - run composer and laravel commands:
+ - composer update --ignore-platform-reqs
+ - php artisan vendor:publish --provider="Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider" --tag=config
     
 CODE STANDARDS (PADRONIZAÇÃO DE CÓDIGO):
  - composer global require friendsofphp/php-cs-fixer
